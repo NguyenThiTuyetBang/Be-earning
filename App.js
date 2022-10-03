@@ -1,7 +1,9 @@
-import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
 import data from "./data.json";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+import Home from "./screens/Home";
+import Wallet from "./screens/Wallet";
 
 export default function App() {
   const [currentData, setCurrentData] = useState([]);
@@ -17,26 +19,23 @@ export default function App() {
     });
     setCurrentData(array.slice(0, 24));
   };
+
   useEffect(() => {
     filterArray(data);
   }, []);
+  const Stack = createStackNavigator();
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>App!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+        initialRouteName={"Home"}
+      >
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Wallet" component={Wallet} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    color: "red",
-    fontSize: "30px",
-  },
-});
