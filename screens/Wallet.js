@@ -100,7 +100,7 @@ const Wallet = ({ navigation }) => {
                 height: 25,
                 width: 25,
                 borderRadius: "50%",
-                backgroundColor: "red",
+                backgroundColor: "#BBCFFB",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -113,6 +113,7 @@ const Wallet = ({ navigation }) => {
                 color: "#04004D",
                 fontSize: "15px",
                 fontWeight: "400",
+                marginLeft: 10,
               }}
             >
               Raise
