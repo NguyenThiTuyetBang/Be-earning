@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import data from "./data.json";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import Home from "./screens/Home";
 import Wallet from "./screens/Wallet";
+import Tabs from "./navigation/tabs";
 
 export default function App() {
   const [currentData, setCurrentData] = useState([]);
@@ -33,7 +33,8 @@ export default function App() {
         }}
         initialRouteName={"Home"}
       >
-        <Stack.Screen name="Home" component={Home} />
+        {/* <Stack.Screen name="Home" component={Home} /> */}
+        <Stack.Screen name="Home" component={Tabs} />
         <Stack.Screen name="Wallet" component={Wallet} />
       </Stack.Navigator>
     </NavigationContainer>

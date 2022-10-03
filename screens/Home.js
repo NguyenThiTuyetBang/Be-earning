@@ -8,16 +8,16 @@ const Home = ({ navigation }) => {
   return (
     <SafeAreaView>
       <Header />
-      <MyWallet />
-      <Transaction />
-      {/* <Button
+      <Button
         onPress={() => {
           navigation.navigate("Wallet");
         }}
         title="Press Me"
       >
         Button
-      </Button> */}
+      </Button>
+      <MyWallet />
+      <Transaction />
     </SafeAreaView>
   );
 };
