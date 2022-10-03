@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { Text, StyleSheet, View, Animated } from "react-native";
-import {
-  FlatList,
-  ScrollView,
-  TouchableOpacity,
-} from "react-native-gesture-handler";
+import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 
 const MyWallet = () => {
   const title = [
@@ -31,17 +27,17 @@ const MyWallet = () => {
       id: 1,
     },
     {
-      color: "orange",
+      color: "#FC9D00",
       title: "@Metanode Wellet",
       desc: "90,500 MCOIN",
       borderColor: "orange",
       id: 2,
     },
     {
-      color: "green",
+      color: "#04B800",
       title: "@Meta Wellet5",
       desc: "90,500 MCOIN",
-      borderColor: "yellow",
+      borderColor: "green",
       id: 3,
     },
   ];
@@ -52,7 +48,7 @@ const MyWallet = () => {
       <TouchableOpacity
         style={{
           height: 133,
-          width: 140,
+          width: 150,
           marginRight: 20,
           borderRadius: 22,
           boxShadow: "0px 10px 20px rgba(85, 76, 255, 0.2)",
