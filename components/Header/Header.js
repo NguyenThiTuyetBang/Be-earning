@@ -33,7 +33,7 @@ function Header() {
 }
 const styles = StyleSheet.create({
   container: {
-    height: 80,
+    height: 70,
     width: "100%",
   },
   header: {
@@ -80,14 +80,18 @@ const styles = StyleSheet.create({
     fontWeight: "400",
   },
   btn: {
-    backgroundColor: "blue",
+    // background: "linear-gradient(#e66465, #9198e5)",
+    backgroundImage: "linear-gradient(red, yellow)",
     borderRadius: 50,
     justifyContent: "center",
     alignItems: "center",
     boxShadow: "0px 10px 20px rgba(41, 39, 77, 0.1)",
     backdropFilter: "blur(11px)",
     marginLeft: 10,
-    padding: 10,
+    height: 40,
+    width: 40,
+    borderWidth: 1,
+    borderColor: "black",
   },
 });
 export default Header;

@@ -1,20 +1,21 @@
 import { SafeAreaView, Text, Button } from "react-native";
 import React from "react";
 import Header from "../components/Header/Header";
+import MyWallet from "../components/MyWallet/MyWallet";
 
 const Home = ({ navigation }) => {
   return (
     <SafeAreaView>
       <Header />
-      <Text>Home</Text>
-      <Button
+      <MyWallet />
+      {/* <Button
         onPress={() => {
           navigation.navigate("Wallet");
         }}
         title="Press Me"
       >
         Button
-      </Button>
+      </Button> */}
     </SafeAreaView>
   );
 };
