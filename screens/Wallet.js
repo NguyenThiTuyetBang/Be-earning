@@ -69,6 +69,57 @@ const Wallet = ({ navigation }) => {
           </Text>
         </View>
       </View>
+      {/* Main content */}
+      <View
+        style={{
+          paddingHorizontal: 15,
+        }}
+      >
+        <View
+          style={{
+            width: 100,
+            height: 40,
+            backgroundColor: "#FFFFFF",
+            borderRadius: 6,
+            paddingHorizontal: 8,
+            paddingVertical: 6,
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "flex-start",
+              alignItems: "center",
+              flexDirection: "row",
+            }}
+          >
+            <View
+              style={{
+                fontSize: "11px",
+                color: "#004DFF",
+                height: 25,
+                width: 25,
+                borderRadius: "50%",
+                backgroundColor: "red",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Text>1</Text>
+            </View>
+            <Text
+              style={{
+                color: "#04004D",
+                fontSize: "15px",
+                fontWeight: "400",
+              }}
+            >
+              Raise
+            </Text>
+          </View>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
