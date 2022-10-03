@@ -1,4 +1,10 @@
-import { SafeAreaView, Text, View, TouchableOpacity } from "react-native";
+import {
+  SafeAreaView,
+  Text,
+  View,
+  TouchableOpacity,
+  Animated,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import data from "../data.json";
 import Svg, { Path } from "react-native-svg";
@@ -14,21 +20,23 @@ const Wallet = ({ navigation }) => {
     });
     setCurrentWord(newArr);
   };
-  // console.log(currentWord);
 
   useEffect(() => {
     geMultipleRandom(data, 24);
   }, []);
+
   return (
     <SafeAreaView
       style={{
         width: "100%",
         height: "100%",
+        maxWidth: "100%",
       }}
     >
       <View
         style={{
           width: "100%",
+          maxWidth: "100%",
           height: 70,
           paddingHorizontal: 15,
           flex: 1,
@@ -73,16 +81,116 @@ const Wallet = ({ navigation }) => {
       <View
         style={{
           paddingHorizontal: 15,
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "row",
         }}
       >
         <View
           style={{
-            width: 100,
+            width: "30%",
             height: 40,
             backgroundColor: "#FFFFFF",
             borderRadius: 6,
             paddingHorizontal: 8,
             paddingVertical: 6,
+            marginRight: 10,
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "flex-start",
+              alignItems: "center",
+              flexDirection: "row",
+            }}
+          >
+            <View
+              style={{
+                fontSize: "11px",
+                color: "#004DFF",
+                height: 25,
+                width: 25,
+                borderRadius: "50%",
+                backgroundColor: "#BBCFFB",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Text>1</Text>
+            </View>
+            <Text
+              style={{
+                color: "#04004D",
+                fontSize: "15px",
+                fontWeight: "400",
+                marginLeft: 10,
+              }}
+            >
+              Raise
+            </Text>
+          </View>
+        </View>
+
+        {/* item 2 */}
+        <View
+          style={{
+            width: "30%",
+            height: 40,
+            backgroundColor: "#FFFFFF",
+            borderRadius: 6,
+            paddingHorizontal: 8,
+            paddingVertical: 6,
+            marginRight: 10,
+          }}
+        >
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "flex-start",
+              alignItems: "center",
+              flexDirection: "row",
+            }}
+          >
+            <View
+              style={{
+                fontSize: "11px",
+                color: "#004DFF",
+                height: 25,
+                width: 25,
+                borderRadius: "50%",
+                backgroundColor: "#BBCFFB",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Text>1</Text>
+            </View>
+            <Text
+              style={{
+                color: "#04004D",
+                fontSize: "15px",
+                fontWeight: "400",
+                marginLeft: 10,
+              }}
+            >
+              Raise
+            </Text>
+          </View>
+        </View>
+
+        {/* item 3*/}
+        <View
+          style={{
+            width: "30%",
+            height: 40,
+            backgroundColor: "#FFFFFF",
+            borderRadius: 6,
+            paddingHorizontal: 8,
+            paddingVertical: 6,
+            marginRight: 10,
           }}
         >
           <View
